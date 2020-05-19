@@ -9,10 +9,11 @@
 import UIKit
 import Lottie
 
-class SplashViewController: UIViewController {
+class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .white
         showAnimation()
     }
     
@@ -29,10 +30,11 @@ class SplashViewController: UIViewController {
         animationView.play { finished in
             if finished {
                 animationView.removeFromSuperview()
-                let nextVC = MainTabBarViewController()
-                self.addChild(nextVC)
-                self.view.addSubview(nextVC.view!)
-                nextVC.didMove(toParent: self)
+                let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                let next: UIViewController = storyboard.instantiateInitialViewController()! as UIViewController
+                self.addChild(next)
+                self.view.addSubview(next.view!)
+                next.didMove(toParent: self)
             }
         }
     }

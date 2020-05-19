@@ -13,7 +13,24 @@
 		E56107D924741ADB0025C633 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E56107D724741ADB0025C633 /* Main.storyboard */; };
 		E56107DB24741ADE0025C633 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E56107DA24741ADE0025C633 /* Assets.xcassets */; };
 		E56107DE24741ADE0025C633 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E56107DC24741ADE0025C633 /* LaunchScreen.storyboard */; };
+		E56107E824741E3B0025C633 /* Lottie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E56107E724741E3B0025C633 /* Lottie.framework */; };
+		E56107E924741E3B0025C633 /* Lottie.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E56107E724741E3B0025C633 /* Lottie.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E56107EC24741F320025C633 /* mapAnimation.json in Resources */ = {isa = PBXBuildFile; fileRef = E56107EB24741F320025C633 /* mapAnimation.json */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E56107EA24741E3B0025C633 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				E56107E924741E3B0025C633 /* Lottie.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		E56107CE24741ADB0025C633 /* myTravelDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = myTravelDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -24,6 +41,8 @@
 		E56107DA24741ADE0025C633 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E56107DD24741ADE0025C633 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E56107DF24741ADE0025C633 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E56107E724741E3B0025C633 /* Lottie.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Lottie.framework; path = Carthage/Build/iOS/Lottie.framework; sourceTree = "<group>"; };
+		E56107EB24741F320025C633 /* mapAnimation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = mapAnimation.json; path = ../../Downloads/mapAnimation.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E56107E824741E3B0025C633 /* Lottie.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +62,7 @@
 			children = (
 				E56107D024741ADB0025C633 /* myTravelDiary */,
 				E56107CF24741ADB0025C633 /* Products */,
+				E56107E624741E3B0025C633 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -59,12 +80,21 @@
 				E56107D124741ADB0025C633 /* AppDelegate.swift */,
 				E56107D324741ADB0025C633 /* SceneDelegate.swift */,
 				E56107D524741ADB0025C633 /* ViewController.swift */,
+				E56107EB24741F320025C633 /* mapAnimation.json */,
 				E56107D724741ADB0025C633 /* Main.storyboard */,
 				E56107DA24741ADE0025C633 /* Assets.xcassets */,
 				E56107DC24741ADE0025C633 /* LaunchScreen.storyboard */,
 				E56107DF24741ADE0025C633 /* Info.plist */,
 			);
 			path = myTravelDiary;
+			sourceTree = "<group>";
+		};
+		E56107E624741E3B0025C633 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E56107E724741E3B0025C633 /* Lottie.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,6 +107,8 @@
 				E56107CA24741ADB0025C633 /* Sources */,
 				E56107CB24741ADB0025C633 /* Frameworks */,
 				E56107CC24741ADB0025C633 /* Resources */,
+				E56107E524741DAA0025C633 /* ShellScript */,
+				E56107EA24741E3B0025C633 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -128,10 +160,32 @@
 				E56107DE24741ADE0025C633 /* LaunchScreen.storyboard in Resources */,
 				E56107DB24741ADE0025C633 /* Assets.xcassets in Resources */,
 				E56107D924741ADB0025C633 /* Main.storyboard in Resources */,
+				E56107EC24741F320025C633 /* mapAnimation.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E56107E524741DAA0025C633 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Lottie.framework",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E56107CA24741ADB0025C633 /* Sources */ = {
@@ -286,6 +340,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9ZJH93GWP3;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = myTravelDiary/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -304,6 +362,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9ZJH93GWP3;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = myTravelDiary/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
